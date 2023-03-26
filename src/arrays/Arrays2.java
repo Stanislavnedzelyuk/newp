@@ -1,8 +1,6 @@
 package arrays;
 
-import java.util.Arrays;
-
-public class arrays2 {
+public class Arrays2 {
     public static void main(String[] args) {
         task1();
         task2();
