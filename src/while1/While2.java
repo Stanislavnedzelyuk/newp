@@ -14,9 +14,10 @@ public class While2 {
     private static void task1() {
         System.out.println("Task1");
         int deposit = 0;
+        int finalDeposit = 2_459_000;
         int month = 1;
         int montlyPay = 15000;
-        while (deposit <= 2_459_000) {
+        while (deposit <= finalDeposit) {
             System.out.println("Месяц " + month + " сумма накоплений равна " + deposit +" рублей");
             deposit = deposit + montlyPay;
             month++;
@@ -49,9 +50,10 @@ public class While2 {
          int mortality = 12000000/1000*8;
 
          int firstYear = 0;
+         int year = 10;
          int birthrateYear = birthrate - mortality;
 
-         while (firstYear <= 10) {
+         while (firstYear <= year) {
              System.out.println("Год " + firstYear + ", численность населения составляет " + populationToday);
              populationToday = populationToday + birthrateYear;
              firstYear++;
@@ -62,8 +64,9 @@ public class While2 {
         System.out.println("Task4");
         int deposit = 15000;
         int month = 1;
+        int sum = 12_000_000;
         double percent = 1.07;
-        while (deposit <= 12_000_000) {
+        while (deposit <= sum) {
             System.out.println("Месяц " + month + ", сумма накоплений равна " + deposit + " рублей");
             month++;
             deposit = (int) (deposit * percent);
@@ -90,8 +93,10 @@ public class While2 {
         int yearToMonth = 0;
         int deposit = 15000;
         double percent = 1.07;
+        int years = 9;
+        int monthInYear = 12;
 
-        while (yearToMonth <= 108) {
+        while (yearToMonth <= years*monthInYear) {
             yearToMonth++;
             deposit = (int) (deposit * percent);
             if (yearToMonth % 6 == 0) {
@@ -104,9 +109,10 @@ public class While2 {
     private static void task7() {
         System.out.println("Task7");
         int friday = 0;
+        int firstFridayInTheMonth = 1;
         while (friday <= 31) {
             friday++;
-            if (friday % 7 == 1) {
+            if (friday % 7 == firstFridayInTheMonth) {
                 System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет");
 
             }
@@ -115,10 +121,14 @@ public class While2 {
     }
     private static void task8() {
         System.out.println("Task8");
-        int start = 1817;
-        while (start < 2054) {
+        int yearToday = 2023;
+        int start = yearToday - 200;
+        int everyYear = 79;
+        int finish = yearToday + 100;
+
+        while (start < finish) {
             start++;
-            if (start%79 == 0) {
+            if (start%everyYear == 0) {
                 System.out.println(start);
             }
         }
