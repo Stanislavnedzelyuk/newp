@@ -38,6 +38,7 @@ public class Methods {
             }
         }
     }
+
     public static void checkNumberDays() {
         int deliveryDistance = 1000;
         if (deliveryDistance <= 20) {
