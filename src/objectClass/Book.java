@@ -1,11 +1,11 @@
-package ObjectClass;
+package objectClass;
 
 public class Book {
     private String name;
-    private String author;
+    private Author author;
     private int yearPublishing;
 
-    public Book (String name, String author,int yearPublishing) {
+    public Book (String name, Author author, int yearPublishing) {
         this.name = name;
         this.author = author;
         this.yearPublishing = yearPublishing;
@@ -13,7 +13,7 @@ public class Book {
     public String getName () {
         return this.name;
     }
-    public String getAuthor () {
+    public Author getAuthor () {
         return this.author;
     }
     public int getYearPublishing () {

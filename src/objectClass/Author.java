@@ -1,4 +1,4 @@
-package ObjectClass;
+package objectClass;
 
 public class Author {
     private String nameAuthor;
