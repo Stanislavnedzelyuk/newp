@@ -3,19 +3,19 @@ package courseWork.bookEmployee;
 public class Employee {
 
     private String fullName;                                //переменная Ф.И.О.
-    private static int department;                                 //переменная отдела
+    private static int department;                          //переменная отдела
     private double salary;                                  //переменная зарплата
-    private int counterID = 0;                              //переменная счетчик
+    private static int counterID = 0;                       //переменная счетчик
     private int empolyeeID;                                 //переменная ID
     private double changeSalary = 1.05;                     //переменная по увеличению зарплаты
     private double newSalary;                               //переменная с новой заработной платной
 
 
-    public Employee(String fullName, int department, double salary, int counterID) { // создал конструктор
+    public Employee(String fullName, int department, double salary) { // создал конструктор
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
-        this.counterID = ++counterID;
+        this.empolyeeID = counterID++;
         this.newSalary = salary*changeSalary;
     }
 
@@ -47,10 +47,13 @@ public class Employee {
         this.newSalary = newSalary;
     }
 
+    public int getEmpolyeeID() {
+        return empolyeeID;
+    }
 
     @Override
     public String toString() {
-        return counterID + ", " + fullName + ", "  + department + ", " + salary + ", " + newSalary;
+        return empolyeeID + ", " + fullName + ", "  + department + ", " + salary + ", " + newSalary;
 
     }
 
@@ -84,7 +87,7 @@ public class Employee {
         for (Employee employee : employees) {
             average += employee.getSalary();
         }
-        return average;
+        return (average/10);
     }
 
     public static Employee printAllFullnameEmployee(Employee[] employees) {
@@ -121,52 +124,6 @@ public class Employee {
         }
         return total;
     }
-
-
-    public static void main(String[] args) {
-        Employee[] storageEmployees = new Employee[10]; //создал массив Employee[10]
-        storageEmployees [0] = new Employee("Иванов Иван Иванович", 1, 100_000, 0);
-        storageEmployees [1] = new Employee("Сидоров Сергей Сидорович", 2, 200_000, 1);
-        storageEmployees [2] = new Employee("Петров Петр Петрович", 3, 300000, 2);
-        storageEmployees [3] = new Employee("Морозов Иван Михайлович", 4, 402000, 3);
-        storageEmployees [4] = new Employee("Стебельков Илья Иванович", 5, 500000, 4);
-        storageEmployees [5] = new Employee("Пустынин Олег Александрович", 1, 53000, 5);
-        storageEmployees [6] = new Employee("Гусеев Анатолий Маркович", 2, 200000,6 );
-        storageEmployees [7] = new Employee("Морозова Инна Ивановна", 3, 300400, 7);
-        storageEmployees [8] = new Employee("Сергеенко Анна Сергеевна", 4, 400000, 8);
-        storageEmployees [9] = new Employee("Мильская Ольга Михайловна", 5, 500000, 9);
-
-
-        System.out.println("Базовая сложность>");
-            for (Employee employee : storageEmployees) {
-                System.out.println(employee);
-            }
-
-        System.out.println("=================");
-        System.out.println("Сумма общих затрат на зарплаты в месяц " + totalSalary(storageEmployees));
-        System.out.println("=================");
-        System.out.println("Сотрудник с минимальной заработной платой: " + printMinSalaryEpmloyee(storageEmployees));
-        System.out.println("=================");
-        System.out.println("Сотрудник с максимальной заработной платой: " + printMaxSalaryEmployee(storageEmployees));
-        System.out.println("=================");
-        System.out.println("Средняя заработная плата: " + printAvarageSalaryEmployee(storageEmployees)/storageEmployees.length);
-        System.out.println("=================");
-        System.out.println("Список всех ФИО:");
-        System.out.println(printAllFullnameEmployee(storageEmployees));
-        System.out.println();
-        System.out.println();
-        System.out.println("Повышенная сложность");
-        System.out.println("Сотрудник с минимальной заработной платой после индексации: " + printNewMinSalaryEpmloyee(storageEmployees));
-        System.out.println("Сотрудник с максимальной заработной платой после индексации: " + printNewMaxSalaryEmployee(storageEmployees));
-        System.out.println("Сумма затрат на зарплату по отделу: " + totalNewSalary(storageEmployees));
-
-
-
-    }
-
-
-
-
 }
 
 
