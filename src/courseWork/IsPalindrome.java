@@ -1,3 +1,5 @@
+package courseWork;
+
 public class IsPalindrome {
     public static boolean isPalindrome(String word) {
         int firstChart = 0;
