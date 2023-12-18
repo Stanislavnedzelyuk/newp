@@ -1,4 +1,4 @@
-package objectClass;
+package oldHomeWork.objectClass;
 
 public class Book {
     private String name;

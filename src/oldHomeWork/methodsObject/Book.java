@@ -1,12 +1,12 @@
-package methodsObject;
+package oldHomeWork.methodsObject;
 
-import objectClass.Author;
+import oldHomeWork.objectClass.Author;
 
 import java.util.Objects;
 
 public class Book {
     private String name;
-    private objectClass.Author author;
+    private oldHomeWork.objectClass.Author author;
     private int yearPublishing;
 
     @Override

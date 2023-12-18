@@ -1,14 +1,18 @@
-package courseWork.bookEmployee;
+package library;
 
 public class Employee {
 
-    private String fullName;                                //переменная Ф.И.О.
-    private static int department;                          //переменная отдела
-    private double salary;                                  //переменная зарплата
-    private static int counterID = 0;                       //переменная счетчик
-    private int empolyeeID;                                 //переменная ID
-    private double changeSalary = 1.05;                     //переменная по увеличению зарплаты
-    private double newSalary;                               //переменная с новой заработной платной
+    private String fullName;  //переменная Ф.И.О.
+    private int department;  //переменная отдела + static пример - президент страны
+    private double salary;   //переменная зарплата
+    private static int counterID = 0; //переменная счетчик
+    private int empolyeeID;           //переменная ID
+    private double changeSalary = 1.05;  //переменная по увеличению зарплаты
+    private double newSalary;
+
+    String man = new String("Nik"); // попросили джаву объект типа стринг, дае памяти и
+                                            // дай ссылку на то место, где этот объект
+
 
 
     public Employee(String fullName, int department, double salary) { // создал конструктор
@@ -82,12 +86,13 @@ public class Employee {
         }
         return maxSalary;
     }
-    public static double printAvarageSalaryEmployee(Employee[] employees) {
+    public static double printAvarageSalaryEmployee(Employee[] emp) {
         double average = 0;
-        for (Employee employee : employees) {
+        for (Employee employee : emp) {
             average += employee.getSalary();
         }
-        return (average/10);
+        return (average/emp.length);  // сантехник мужчины, тип - человек
+        // всегда с большой буквы, с маленькой буквы мужчины переменная, тип=класс
     }
 
     public static Employee printAllFullnameEmployee(Employee[] employees) {

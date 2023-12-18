@@ -1,14 +1,14 @@
-package methodsObject;
+package oldHomeWork.methodsObject;
 
-import objectClass.Author;
-import objectClass.Book;
+import oldHomeWork.objectClass.Author;
+import oldHomeWork.objectClass.Book;
 
 public class LibraryApp {
     public static void main(String[] args) {
-        objectClass.Author author1 = new objectClass.Author("Don", "Bon");
-        objectClass.Author author2 = new Author("Son", "Dob");
-        objectClass.Book book1 = new objectClass.Book("Cars", author1, 2000);
-        objectClass.Book book2 = new Book("Bus", author2, 2100);
+        oldHomeWork.objectClass.Author author1 = new oldHomeWork.objectClass.Author("Don", "Bon");
+        oldHomeWork.objectClass.Author author2 = new Author("Son", "Dob");
+        oldHomeWork.objectClass.Book book1 = new oldHomeWork.objectClass.Book("Cars", author1, 2000);
+        oldHomeWork.objectClass.Book book2 = new Book("Bus", author2, 2100);
 
 
         System.out.println(book1.getName() + " - " + book1.getAuthor().getNameAuthor() + " " + book1.getAuthor().getSurnameAuthor() + ", " + book1.getYearPublishing() + " years");
