@@ -1,4 +1,4 @@
-package variables;
+package oldHomeWork.variables;
 
 public class variables1 {
     public static void main(String[] args) {

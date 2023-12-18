@@ -1,4 +1,4 @@
-package courseWork;
+package oldHomeWork.courseWork;
 
 public class IsPalindrome {
     public static boolean isPalindrome(String word) {

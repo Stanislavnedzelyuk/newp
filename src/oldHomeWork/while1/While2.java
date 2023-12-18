@@ -1,4 +1,4 @@
-package while1;
+package oldHomeWork.while1;
 
 public class While2 {
     public static void main(String[] args) {
